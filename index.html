@@ -198,7 +198,7 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
 
 .hero {
   position: relative;
-  padding: 2.75rem 0 2.2rem;
+  padding: 2rem 0 1.5rem;
   overflow: hidden;
   background-image: url('SUA_IMAGEM_DE_FUNDO_AQUI');
   background-size: cover;
@@ -221,6 +221,8 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
   padding: 0 1.5rem;
 }
 
+/* Eyebrow */
+
 .eyebrow {
   font-family: var(--font-display);
   font-size: .85rem;
@@ -228,15 +230,19 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--color-ink-faint);
-  margin-bottom: .7rem;
+  margin-bottom: .55rem;
 }
+
+/* Nome */
 
 .hero-name {
   font-size: clamp(2.6rem, 8vw, 4.6rem);
   text-transform: lowercase;
   font-weight: 700;
-  margin-bottom: .25rem;
+  margin-bottom: .2rem;
 }
+
+/* Tagline */
 
 .hero-tagline {
   display: flex;
@@ -247,7 +253,7 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
   font-size: clamp(1.05rem, 2vw, 1.35rem);
   color: var(--color-ink-soft);
   text-transform: lowercase;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.1rem;
 }
 
 .gold-bar {
@@ -258,34 +264,106 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
   border-radius: 2px;
 }
 
+/* Tese */
+
 .hero-thesis {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   font-weight: 600;
   max-width: 20ch;
-  margin-bottom: .7rem;
+  margin-bottom: .55rem;
 }
+
+/* Texto de apresentação */
 
 .hero-lede {
   font-size: 1.08rem;
   color: var(--color-ink-soft);
   max-width: 56ch;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.1rem;
 }
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: .9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .95rem;
+  transition:
+    transform .2s var(--ease),
+    background .2s var(--ease),
+    color .2s var(--ease),
+    border-color .2s var(--ease);
+}
+
+/* Ver minha trajetória — botão preto */
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: var(--color-terracotta-deep);
+  transform: translateY(-1px);
+}
+
+/* Conectar no LinkedIn — botão transparente com borda */
+
+.btn-ghost {
+  border: 1.5px solid var(--color-ink);
+  color: var(--color-ink);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+/* Botões em seção escura */
+
+.section-dark .btn-ghost {
+  border-color: var(--color-bg);
+  color: var(--color-bg);
+}
+
+.section-dark .btn-ghost:hover {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* Botão grande */
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.02rem;
+}
+
+/* =========================================================
+   ESTATÍSTICAS
+   ========================================================= */
 
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   border-top: 1px solid var(--color-line);
-  padding-top: 1.2rem;
+  padding-top: 1rem;
 }
 
 .stat {
@@ -307,9 +385,13 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
   line-height: 1.35;
 }
 
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
 @media (max-width: 780px) {
   .hero {
-    padding: 2rem 0 1.8rem;
+    padding: 1.7rem 0 1.3rem;
   }
 
   .hero-stats {
@@ -319,7 +401,7 @@ h2{ font-size: clamp(1.6rem, 3vw, 2.35rem); max-width: 30ch; }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 1.5rem 0 1.5rem;
+    padding: 1.4rem 0 1.2rem;
   }
 
   .hero-stats {
